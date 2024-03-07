@@ -63,19 +63,19 @@
 -- group by death.date,death.location,vaccination.new_vaccinations
 -- order by 1,2 
 
-create view Vaccination_trend as
+-- create view Vaccination_trend as
 
-select  death.location,
-		death.date,
-		vaccination.new_vaccinations,
-		sum(vaccination.new_vaccinations) over 
-		(partition by death.location order by death.location,death.date) as Total_vaccination
-from death
-join vaccination
-on death.location = vaccination.location
-	and death.date = vaccination.date
-where 
-		 death.continent is not null
-		 and death.location = 'Canada'
-group by death.date,death.location,vaccination.new_vaccinations
-order by 1,2 
+-- select  death.location,
+-- 		death.date,
+-- 		vaccination.new_vaccinations,
+-- 		sum(vaccination.new_vaccinations) over 
+-- 		(partition by death.location order by death.location,death.date) as Total_vaccination
+-- from death
+-- join vaccination
+-- on death.location = vaccination.location
+-- 	and death.date = vaccination.date
+-- where 
+-- 		 death.continent is not null
+-- 		 and death.location = 'Canada'
+-- group by death.date,death.location,vaccination.new_vaccinations
+-- order by 1,2 
