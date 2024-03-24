@@ -1,6 +1,6 @@
 # Covid_Analyzing
 
-IN this project, I analyzed 
+In this project, I analyzed 
 You can find Dataset in the link below:
 https://ourworldindata.org/explorers/coronavirus-data-explorer 
 
