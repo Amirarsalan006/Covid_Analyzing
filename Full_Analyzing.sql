@@ -1,7 +1,7 @@
 select * from death
 
 
-                total deaths vs. total cases
+               -- total deaths vs. total cases
 select 
 	location,
 	sum(new_cases) as total_cases,
@@ -16,7 +16,7 @@ where continent is not null
 group by location
 order by total_deaths desc
 
-                 total cases vs. population
+                -- total cases vs. population 
 
 select 
 	location,
@@ -34,7 +34,7 @@ having
 		sum(new_cases) != 0
 order by total_cases desc
 
-			let's check it out by continent
+			--let's check it out by continent
 select 
 	continent,location,population,
 	sum(new_cases) as total_cases,
@@ -46,7 +46,7 @@ group by continent,location,population
 
 order by continent desc	
 
-			vaccination trends in Canada
+			--vaccination trends in Canada
 
 select  death.location,
 		death.date,
