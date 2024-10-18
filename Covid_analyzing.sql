@@ -34,7 +34,7 @@ having
 		sum(new_cases) != 0
 order by total_cases desc
 
-			let's check it out by continent
+			--let's check it out by continent
 select 
 	continent,location,population,
 	sum(new_cases) as total_cases,
